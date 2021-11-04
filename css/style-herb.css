@@ -33,10 +33,17 @@ nav li{
   padding-right: 20px;
 }
 
+nav i{
+  line-height: 18px;
+  vertical-align: middle;
+}
+
 nav{
   background-color: #ddd;
   padding: 25px 0;    
   text-align: center;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 header p{
@@ -71,7 +78,6 @@ nav a:hover{
 }
 
 
-
 .skip a{
   background: white;
   left: 0;
@@ -99,18 +105,33 @@ nav a:hover{
 .container{
   /* Requirement 5 code here*/
   display: grid;
-  grid-template-columns: 1fr 2fr 5fr 2fr 1fr;
-  grid-template-rows: repeat(7, auto);
+  grid-template-columns: 2fr 1fr 10fr 1fr 2fr;
+  grid-template-rows: repeat(8, auto);
   grid-row-gap: 5px;
 }
 
 /* Remainder of requirements here: */
 
+.back-to-main{
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  text-align: left;
+  margin: 15px;
+}
+.back-to-main i{
+  line-height: 45px;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.back-to-main a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 header{
   color: rgb(65, 52, 34);
   width: auto;
-
-  /* YOUR CODE HERE; */
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
 }
@@ -119,15 +140,22 @@ header{
     grid-column: 2 / -2;
     overflow: hidden;
     grid-row: 2 / span 1;
-    margin-bottom: 30px;
-  }
-  .mint-image img{
-    height: 300px;
-    width: auto;
+    margin-bottom: 15px;
+}
+.mint-image img{
+    height: auto;
+    width: 100%;
     object-fit: scale-down;
     object-position: right;
-  }
+}
 
+.description{
+  grid-column: 3 / -3;
+  grid-row: 3 / span 1;
+  margin-bottom: 30px;
+  text-indent: 15px;
+  line-height: 20px;
+}
 
 .icon-topic{
     display: inline;
@@ -146,40 +174,40 @@ header{
 }
 .guideline p{
     margin-top: 15px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #sun{
-    grid-column: 3 / -3;
-    grid-row: 3 / span 1;
-    align-self: center;
-    text-align: center;
-}
-
-#water{
     grid-column: 3 / -3;
     grid-row: 4 / span 1;
     align-self: center;
     text-align: center;
 }
 
-#spread{
+#water{
     grid-column: 3 / -3;
     grid-row: 5 / span 1;
     align-self: center;
     text-align: center;
 }
 
-#height{
+#spread{
     grid-column: 3 / -3;
     grid-row: 6 / span 1;
     align-self: center;
     text-align: center;
 }
 
-#lifespan{
+#height{
     grid-column: 3 / -3;
     grid-row: 7 / span 1;
+    align-self: center;
+    text-align: center;
+}
+
+#lifespan{
+    grid-column: 3 / -3;
+    grid-row: 8 / span 1;
     align-self: center;
     text-align: center;
 }
