@@ -1,0 +1,260 @@
+/***** STARTER CODE - DO NOT CHANGE *****/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: lightgray;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sue Ellen Francisco', cursive;
+}
+
+h1{
+  font-size: 36px;
+  line-height: 1;
+  padding: 72px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav{
+  background-color: #ddd;
+  padding: 25px 0;    
+  text-align: center;
+}
+
+header p{
+  color: rgb(65, 52, 34);
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+footer{
+  background-color: rgb(65, 52, 34);
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+
+
+/*****  End Starter Code ****/
+
+nav a{
+  color: black;
+  font-weight: bold;
+  /* Requirement 1 code here*/
+  text-decoration: none;
+}
+
+  /* Requirement 2 code here*/
+nav a:hover{
+  text-decoration: underline;
+}
+
+
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  /* Requirement 3a code here*/
+  position: absolute;
+  top: -40px;
+}
+
+/* Requirement 3b code here*/
+.skip a:focus{
+  position: absolute;
+  top: 0px;
+}
+
+/* Requirement 4 code here*/
+:focus{
+  border: 2px solid;
+}
+
+.container{
+  /* Requirement 5 code here*/
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: repeat(9, auto);
+  grid-row-gap: 5px;
+}
+
+/* Remainder of requirements here: */
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center; /* Parallax effect */
+  background-size: cover; /* Parallax effect */
+  color: rgb(65, 52, 34);
+  min-height: 500px;
+  width: auto;
+  margin-bottom: 72px;
+
+  /* YOUR CODE HERE; */
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.mint-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  grid-row: 2 / span 1;
+}
+.mint-image img{
+  height: 300px;
+  width: auto;
+  object-fit: scale-down;
+  object-position: right;
+}
+.mint{
+ grid-column: 3 / span 1;
+ grid-row: 3 / span 1;
+}
+
+.rosemary-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  grid-row: 4 / span 1;
+}
+.rosemary-image img{
+  height: 300px;
+  width: auto;
+  object-fit: scale-down;
+  object-position: right;
+}
+.rosemary{
+  grid-column: 3 / span 1;
+  grid-row: 5 / span 1;
+}
+
+.parsley-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  grid-row: 6 / span 1;
+}
+.parsley-image img{
+  height: 300px;
+  width: auto;
+  object-fit: scale-down;
+  object-position: right;
+}
+.parsley{
+  grid-column: 3 / span 1;
+  grid-row: 7 / span 1;
+}
+
+.sage-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  grid-row: 8 / span 1;
+}
+.sage-image img{
+  height: 300px;
+  width: auto;
+  object-fit: scale-down;
+  object-position: right;
+}
+.sage{
+  grid-column: 3 / span 1;
+  grid-row: 9 / span 1;
+}
+
+.block{
+  padding-bottom: 72px;
+}
+
+.block-text{
+  color: rgb(65, 52, 34);
+  padding: 15px;
+  align-self: center;
+  text-align: center;
+}
+
+.block-button{
+  background-color: rgb(238, 236, 232);
+  border: 2px solid rgb(65, 52, 34);
+  border-radius: 3px;
+  color: rgb(65, 52, 34);
+  font-size: 15px;
+  padding: 7px;
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px){
+  nav{
+    padding: 30px 0;
+
+    /* Your code here */
+    text-align: right;
+  }
+
+  .container{
+   grid-template-columns: 50px auto 500px auto 50px;
+   grid-template-rows: repeat(9, 400px);
+  }
+
+
+
+  .mint, .parsley, .rosemary-image, .sage-image{
+     grid-column: 3 / span 2;   
+  }
+
+
+  .rosemary, .sage, .mint-image, .parsley-image{
+    grid-column: 2 / span 2;
+  }
+
+
+}
+
+
+/** Code for prefers reduced motion **/
+/* Make no changes below this line.
+   *************************************** 
+   */
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  /*Turn off transition*/
+  .skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
