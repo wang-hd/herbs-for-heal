@@ -66,13 +66,11 @@ footer{
 /*****  End Starter Code ****/
 
 nav a{
-  color: black;
+  color: rgb(65, 52, 34);
   font-weight: bold;
-  /* Requirement 1 code here*/
   text-decoration: none;
 }
 
-  /* Requirement 2 code here*/
 nav a:hover{
   text-decoration: underline;
 }
@@ -124,7 +122,7 @@ nav a:hover{
   font-size: 15px;
 }
 .back-to-main a{
-  color: black;
+  color: rgb(65, 52, 34);
   font-weight: bold;
   text-decoration: none;
 }
@@ -159,6 +157,7 @@ header{
 
 .icon-topic{
     display: inline;
+    color: rgb(65, 52, 34);
 }
 .icon-topic i{
     vertical-align: middle;
