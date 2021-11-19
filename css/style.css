@@ -380,6 +380,48 @@ color: rgb(65, 52, 34);
     font-size: 25px;
     line-height: 30px;
   }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(11, auto);
+    grid-row-gap: 5px;
+  }
+  .mint-image{
+    grid-column: 2 / span 3;
+    overflow: hidden;
+    grid-row: 2 / span 1;
+  }
+  .mint{
+   grid-column: 3 / span 1;
+   grid-row: 3 / span 1;
+  }
+  .rosemary-image{
+    grid-column: 6 / span 3;
+    overflow: hidden;
+    grid-row: 2 / span 1;
+  }
+  .rosemary{
+    grid-column: 7 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .parsley-image{
+    grid-column: 2 / span 3;
+    overflow: hidden;
+    grid-row: 4 / span 1;
+  }
+  .parsley{
+    grid-column: 3 / span 1;
+    grid-row: 5 / span 1;
+  }
+  .sage-image{
+    grid-column: 6 / span 3;
+    overflow: hidden;
+    grid-row: 4 / span 1;
+  }
+  .sage{
+    grid-column: 7 / span 1;
+    grid-row: 5 / span 1;
+  }
   .mint-image img{
     width: 100%;
     height: auto;
