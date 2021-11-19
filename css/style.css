@@ -1,4 +1,4 @@
-/***** STARTER CODE - DO NOT CHANGE *****/
+/***** common header & footer *****/
 html{
     scroll-behavior: smooth;
 }
@@ -56,11 +56,6 @@ footer{
   text-align: center;
 }
 
-
-
-
-/*****  End Starter Code ****/
-
 nav a{
   color: rgb(65, 52, 34);
   font-weight: bold;
@@ -70,7 +65,6 @@ nav a{
 nav a:hover{
   text-decoration: underline;
 }
-
 
 .skip a{
   background: white;
@@ -85,22 +79,19 @@ nav a:hover{
   top: -40px;
 }
 
-/* Requirement 3b code here*/
 .skip a:focus{
   position: absolute;
   top: 0px;
 }
 
+
+/*main page style*/
 .container{
-  /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
   grid-template-rows: repeat(11, auto);
   grid-row-gap: 5px;
 }
-
-/* Remainder of requirements here: */
-
 header{
   background-attachment: fixed; /* Parallax effect */
   background-position: center; /* Parallax effect */
@@ -110,13 +101,13 @@ header{
   width: auto;
   margin-bottom: 72px;
 
-  /* YOUR CODE HERE; */
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
+
 
 .mint-image{
   grid-column: 2 / -2;
@@ -133,7 +124,6 @@ header{
  grid-column: 3 / span 1;
  grid-row: 3 / span 1;
 }
-
 .rosemary-image{
   grid-column: 2 / -2;
   overflow: hidden;
@@ -149,7 +139,6 @@ header{
   grid-column: 3 / span 1;
   grid-row: 5 / span 1;
 }
-
 .parsley-image{
   grid-column: 2 / -2;
   overflow: hidden;
@@ -165,7 +154,6 @@ header{
   grid-column: 3 / span 1;
   grid-row: 7 / span 1;
 }
-
 .sage-image{
   grid-column: 2 / -2;
   overflow: hidden;
@@ -181,8 +169,8 @@ header{
   grid-column: 3 / span 1;
   grid-row: 9 / span 1;
 }
-
 .gallery{  
+  background-color: rgb(70, 134, 81);
   background-attachment: fixed; /* Parallax effect */
   background-position: center; /* Parallax effect */
   background-size: cover; /* Parallax effect */
@@ -191,19 +179,18 @@ header{
   background-attachment: scroll;   
   min-height: 300px;
   width: auto;
-
   grid-column: 1 / -1;
   grid-row: 10 / span 1;
 }
 .gallery h2{
-  color: rgb(238, 236, 232);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 36px;
   font-weight: 50;
   padding: 60px;
 }
 .gallery-button{
-  background-color: rgba(255,255,255, 0.4);
+  background-color: rgba(255,255,255, 0.6);
   border-radius: 3px;
   padding: 15px;
   margin: auto;
@@ -211,22 +198,20 @@ header{
   max-width: 100px;
 }
 .gallery-button a{
-  color: rgb(238, 236, 232);
+  color: rgb(65, 52, 34);
+  font-weight: bold;
   text-decoration: none;
   font-size: 15px;
 }
-
 .block{
   padding-bottom: 72px;
 }
-
 .block-text{
   color: rgb(65, 52, 34);
   padding: 15px;
   align-self: center;
   text-align: center;
 }
-
 .block-button{
   background-color: rgb(238, 236, 232);
   border: 2px solid rgb(65, 52, 34);
@@ -243,29 +228,213 @@ header{
 }
 
 
-@media screen and (min-width: 800px){
+
+/*herb page style*/
+.container-herb{
+  display: grid;
+  grid-template-columns: 2fr 1fr 10fr 1fr 2fr;
+  grid-template-rows: repeat(10, auto);
+  grid-row-gap: 5px;
+}
+.curr-page{
+  text-decoration: underline green solid 2px;
+  color: green;
+}
+.herb-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  grid-row: 2 / span 1;
+  margin-bottom: 15px;
+}
+.herb-image img{
+  height: auto;
+  width: 100%;
+  object-fit: scale-down;
+  object-position: right;
+}
+.description{
+grid-column: 3 / -3;
+grid-row: 3 / span 1;
+margin-bottom: 30px;
+text-indent: 15px;
+line-height: 22px;
+font-family: "Comic Sans", cursive;
+color: rgb(65, 52, 34);
+}
+.icon-topic{
+  display: inline;
+  color: rgb(65, 52, 34);
+}
+.icon-topic i{
+  vertical-align: middle;
+  line-height: 35px;
+}
+.icon-topic span{
+  font-size: 25px;
+  font-weight: bold;
+}
+.guideline{
+  margin-bottom: 45px;
+}
+.guideline p{
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: "Comic Sans", cursive;
+  color: rgb(65, 52, 34);
+}
+#sun{
+  grid-column: 3 / -3;
+  grid-row: 4 / span 1;
+  align-self: center;
+  text-align: center;
+}
+#water{
+  grid-column: 3 / -3;
+  grid-row: 5 / span 1;
+  align-self: center;
+  text-align: center;
+}
+#spread{
+  grid-column: 3 / -3;
+  grid-row: 6 / span 1;
+  align-self: center;
+  text-align: center;
+}
+#height{
+  grid-column: 3 / -3;
+  grid-row: 7 / span 1;
+  align-self: center;
+  text-align: center;
+}
+#lifespan{
+  grid-column: 3 / -3;
+  grid-row: 8 / span 1;
+  align-self: center;
+  text-align: center;
+}
+.bulletin{
+  font-family: "Comic Sans", cursive;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(65, 52, 34);
+  padding-bottom: 20px;
+}
+.bulletin h2 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  padding-bottom: 10px;
+}
+.tip{
+  grid-column: 2 / -2;
+  grid-row: 9 / span 1;
+}
+.recipe{
+  grid-column: 2 / -2;
+  grid-row: 10 / span 1;
+}
+.recipe-image{
+  grid-column: 2 / -2;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.recipe-image img{
+  height: auto;
+  width: 100%;
+  object-fit: scale-down;
+  object-position: right;
+}
+
+/* gallery page style */
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 600px){
+  /* main page */
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav li{
+    display: inline;
+  }
   nav{
-    padding: 30px 0;
-
-    /* Your code here */
-    text-align: right;
+    background-color: #ddd; 
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .mint-image img{
+    width: 100%;
+    height: auto;
+  }
+  .parsley-image img{
+    width: 100%;
+    height: auto;
+  }
+  .rosemary-image img{
+    width: 100%;
+    height: auto;
+  }
+  .sage-image img{
+    width: 100%;
+    height: auto;
   }
 
-  .container{
-   grid-template-columns: 50px auto 500px auto 50px;
-   grid-template-rows: repeat(9, 400px);
+  /* herb page */
+  .container-herb{
+    display: grid;
+    grid-template-columns: 2fr 1fr 10fr 1fr 2fr;
+    grid-template-rows: repeat(10, auto);
+    grid-row-gap: 5px;
+  }
+  #sun{
+    grid-column: 3 / -3;
+    grid-row: 4 / span 1;
+    align-self: center;
+    text-align: center;
+  }
+  #water{
+    grid-column: 3 / -3;
+    grid-row: 5 / span 1;
+    align-self: center;
+    text-align: center;
+  }
+  #spread{
+    grid-column: 3 / -3;
+    grid-row: 6 / span 1;
+    align-self: center;
+    text-align: center;
+  }
+  #height{
+    grid-column: 3 / -3;
+    grid-row: 7 / span 1;
+    align-self: center;
+    text-align: center;
+  }
+  #lifespan{
+    grid-column: 3 / -3;
+    grid-row: 8 / span 1;
+    align-self: center;
+    text-align: center;
   }
 
-
-
-  .mint, .parsley, .rosemary-image, .sage-image{
-     grid-column: 3 / span 2;   
-  }
-
-
-  .rosemary, .sage, .mint-image, .parsley-image{
-    grid-column: 2 / span 2;
-  }
 
 
 }

@@ -101,7 +101,6 @@ nav a:hover{
 }
 
 .container{
-  /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 2fr 1fr 10fr 1fr 2fr;
   grid-template-rows: repeat(8, auto);
@@ -134,13 +133,13 @@ header{
   grid-row: 1 / span 1;
 }
 
-.mint-image{
+.herb-image{
     grid-column: 2 / -2;
     overflow: hidden;
     grid-row: 2 / span 1;
     margin-bottom: 15px;
 }
-.mint-image img{
+.herb-image img{
     height: auto;
     width: 100%;
     object-fit: scale-down;
