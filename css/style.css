@@ -58,6 +58,7 @@ footer{
   color: white;
   padding-top: 30px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav a{
@@ -410,8 +411,12 @@ color: rgb(65, 52, 34);
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner, 
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner{
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -620,7 +625,7 @@ input[type=submit]:hover {
   }
 
   /*Turn off transition*/
-  .skip a{
+  .skip a, .gallery-button, .gallery-button:hover{
     -webkit-transition: initial; /* sets to default setting */
     transition: initial; /* sets to default setting */
   }
@@ -633,5 +638,13 @@ input[type=submit]:hover {
   /*Turn off animation*/
   .block-button, .block-button:hover {
     animation: initial;
+  }
+
+  /*Turn off flip*/
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner{
+    transform: initial;
   }
 }
