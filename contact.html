@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Amatic+SC&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Herbs for heal - Mint</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <nav>
+        <ul>
+          <li><a href="./index.html">Main Page</a></li>
+          <li><a href="./mint.html">Mint</a></li>
+          <li><a href="./rosemary.html">Rosemary</a></li>
+          <li><a href="./parsley.html">Parsley</a></li>
+          <li><a href="./sage.html">Sage</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a class="curr-page" href="./contact.html"><i class="material-icons">navigate_next</i>Contact</a></li>
+        </ul>
+      </nav>
+    <main class="container-herb">
+
+    <header id="main">
+      <h1>Contact</h1>
+      <p>Leave a message for the aurthor!</p>
+    </header>
+    
+    <div class="container-contact">
+        <form action="https://formspree.io/f/mdobonqb" method="post">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="herb">Pick a Herb!</label>
+          <select id="herb" name="herb">
+            <option value="mint">Mint</option>
+            <option value="rosemary">Rosemary</option>
+            <option value="parsley">Parsley</option>
+            <option value="sage">Sage</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    
+
+  </main>
+    <footer>
+      <p>Hongdan Wang <br/>
+        &copy; Web Design 2021-2022</p>
+    </footer>
+  </body>
+</html>
